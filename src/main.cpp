@@ -1,5 +1,5 @@
 #include <ncurses.h>
-#include "map.hpp"
+#include "game.hpp"
 
 int main()
 {
@@ -7,13 +7,11 @@ int main()
   noecho();
   curs_set(0);
   keypad(stdscr, TRUE);
+  timeout(100);
 
-  Map m;
-  m.draw();
-
-  refresh();
-  getch();
-
+  Game g;
+  g.run();
+  
   endwin();
 
   return 0;

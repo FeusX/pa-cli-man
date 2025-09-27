@@ -6,14 +6,12 @@
 
 class Map
 {
-private:
-  std::vector<std::string> layout;
-
 public:
   Map();
   void draw() const;
   int getHeight() const;
   int getWidth() const;
+  std::vector<std::string> layout;
 };
 
 #endif
