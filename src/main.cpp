@@ -1,8 +1,11 @@
 #include <ncurses.h>
 #include "game.hpp"
+#include <ctime>
 
 int main()
 {
+  srand(time(nullptr));
+  
   initscr();
   noecho();
   curs_set(0);
