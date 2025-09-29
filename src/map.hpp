@@ -12,6 +12,7 @@ public:
   int getHeight() const;
   int getWidth() const;
   std::vector<std::string> layout;
+  int bean_count;
 };
 
 #endif

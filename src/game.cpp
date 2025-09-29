@@ -18,6 +18,8 @@ void Game::run()
   int dx = 0, dy = 0;
   int last_ch = ERR;
 
+  int bean_count = 345;
+
   while(running)
   {
     clear();
@@ -75,6 +77,11 @@ void Game::run()
             {
               map.layout[new_y][new_x] = ' ';
               mvaddch(new_y, new_x, ' ');
+              bean_count--;
+              if(bean_count <= 0)
+              {
+                running = false;
+              }
             }
           }
         }   
